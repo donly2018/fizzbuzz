@@ -20,8 +20,13 @@ public class FizzBuzzController {
 
 	// Calling using: http://localhost:8080/fizzbuzz?input=1,2,3,4,5,6,7,8,9,10
 	@RequestMapping(value = "/fizzbuzz", params = "input", method = RequestMethod.GET)
-	public ResponseEntity<List<String>> persistPerson(@RequestParam("input") int[] input) {
+	public ResponseEntity<List<String>> fizzBuzz(@RequestParam("input") int[] input) {
 		return new ResponseEntity<>(fizzBuzzService.getFizzBuzz(input), HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ResponseEntity<String> home() {
+		return new ResponseEntity<>("Server is Up and Running!", HttpStatus.OK);
 	}
 
 }
