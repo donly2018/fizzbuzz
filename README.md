@@ -1,5 +1,9 @@
 # fizzbuzz
 
+### UI Page to test this REST API
+
+https://donly2018.github.io/fizzbuzz.html
+
 ### Run application locally: 
 
 mvn clean spring-boot:run
